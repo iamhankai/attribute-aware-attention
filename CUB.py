@@ -32,7 +32,7 @@ def load_data(data_folder, target_size=(224, 224), bounding_box=True):
     attribute_name_file = data_folder+'/attributes.txt'
     processed_attribute_file = data_folder+'/processed_attributes.txt'
     # train test split
-    split_rf = open(split_file,'rb')
+    split_rf = open(split_file,'r')
     train_test_list = []
     train_idx = []
     test_idx = []
@@ -47,7 +47,7 @@ def load_data(data_folder, target_size=(224, 224), bounding_box=True):
         i+=1
     split_rf.close()
     # bb
-    bb_rf = open(bb_file,'rb')
+    bb_rf = open(bb_file,'r')
     bb_list = []
     for line in bb_rf.readlines():
         strs = line.strip().split(' ')
@@ -56,7 +56,7 @@ def load_data(data_folder, target_size=(224, 224), bounding_box=True):
     bb_rf.close()
     # images
     i = 0
-    images_rf = open(images_file,'rb')
+    images_rf = open(images_file,'r')
     for line in images_rf.readlines():
         strs = line.strip().split(' ')
         img = image.load_img(data_folder+'/images/'+strs[1])
@@ -73,7 +73,7 @@ def load_data(data_folder, target_size=(224, 224), bounding_box=True):
             print(i,' images load.')
     images_rf.close()
     # label
-    label_rf = open(label_file,'rb')
+    label_rf = open(label_file,'r')
     for line in label_rf.readlines():
         strs = line.strip().split(' ')
         if(train_test_list[int(strs[0])-1]=='1'):
@@ -87,7 +87,7 @@ def load_data(data_folder, target_size=(224, 224), bounding_box=True):
     A_test = A_all[test_idx]
     # class attributes
     C_A = np.zeros((200,312))
-    class_attr_rf = open(class_attributes_file,'rb')
+    class_attr_rf = open(class_attributes_file,'r')
     i = 0
     for line in class_attr_rf.readlines():
         strs = line.strip().split(' ')

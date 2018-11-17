@@ -20,16 +20,18 @@ from keras.optimizers import SGD
 from keras.utils import np_utils
 from keras import backend as K
 from keras.models import load_model
-from keras.utils.visualize_util import plot
-#from deep_learning_models.vgg16 import VGG16
+#from keras.utils.visualize_util import plot
 from keras.applications.vgg16 import VGG16
 from keras.applications.resnet50 import ResNet50
-import CUB
 import scipy.misc
 from sklearn import preprocessing
+import CUB
+
+# args
+net = sys.argv[1]
+data_folder = sys.argv[2]
 
 # model config
-net = sys.argv[1]
 flag_test = False
 batch_size = 10
 nb_epoch = 10
@@ -44,12 +46,11 @@ region_equal = False
 
 # dataset config
 dataset = 'CUB'
-data_folder = '/home/hankai/data/CUB_200_2011'
 nb_classes = 200
 nb_attributes = [10, 16, 16, 16, 5, 16, 7, 16, 12, 16, 16, 15, 4, 16, 16, 16, 16, 6, 6, 15, 5, 5, 5, 16, 16, 16, 16, 5]
 img_rows, img_cols = 448, 448
 L = 14*14
-lr_list = [0.001,0.001,0.001,0.001,0.001,0.001,0.0001]
+lr_list = [0.001,0.003,0.001,0.001,0.001,0.001,0.001,0.0001]
 
 def init_classification(input_fea_map, dim_channel, nb_class, name=None):
     # conv

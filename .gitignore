@@ -1,11 +1,11 @@
-#忽略build文件夹
+# ignore folder
 build
 log
 
-# 忽略所有生成的备份文件
+# backup files
 *.*~
 
-#忽略所有.o 和 .a文件.
+#.o and .a files
 *.[oa]
 
 *.DS_Store

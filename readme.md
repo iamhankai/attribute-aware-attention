@@ -4,23 +4,25 @@ Code for paper: Attribute-Aware Attention Model for Fine-grained Representation 
 ![](./fig/a3m.png)
 
 ### Usage
-Requires: Keras 1.2.1 with Theano backend
+Requires: Keras 1.2.1 ("image_data_format": "channels_first")
 
-1. Download CUB-200-2011 dataset [here](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) and unzip it to `$CUB`; Change `data_dir` in `cub_demo.py` to `$CUB`.
+1. Download CUB-200-2011 dataset [here](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) and unzip it to `$CUB`; Copy file `tools/processed_attributes.txt` in `$CUB`.
 
-2. `sh cub_run.sh`
+2. Change `data_dir` in `run.sh` to `$CUB`, run the scprit `sh run.sh` to obtain the result.
 
-Result on CUB dataset
+- Result on CUB dataset
 ![](./fig/result.png)
 
 ### Citation
 
 Please use the following bibtex to cite our work:
 ```
-@inproceedings{a3m_2018_kai,
-  author = {Kai Han and Jianyuan Guo and Chao Zhang and Mingjian Zhu},
-  title = {Attribute-Aware Attention Model for Fine-grained Representation Learning},
-  year = {2018},
-  booktitle = {ACM Multimedia Conference}
-  }
+@inproceedings{han2018attribute,
+  title={Attribute-Aware Attention Model for Fine-grained Representation Learning},
+  author={Han, Kai and Guo, Jianyuan and Zhang, Chao and Zhu, Mingjian},
+  booktitle={2018 ACM Multimedia Conference on Multimedia Conference},
+  pages={2040--2048},
+  year={2018},
+  organization={ACM}
+}
 ```
