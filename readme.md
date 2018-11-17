@@ -1,6 +1,7 @@
 ## Attribute-Aware Attention Model
-Code for paper: Attribute-Aware Attention Model for Fine-grained Representation Learning
+Code for ACM Multimedia 2018 oral paper: Attribute-Aware Attention Model for Fine-grained Representation Learning
 
+<img src="./fig/title.png" width="50%" height="50%">
 <img src="./fig/a3m.png" width="70%" height="70%">
 
 ### Usage
