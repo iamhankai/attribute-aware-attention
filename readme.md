@@ -11,7 +11,7 @@ Run in two steps:
 1. Download CUB-200-2011 dataset [here](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) and unzip it to `$CUB`; Copy file `tools/processed_attributes.txt` in `$CUB`.
 
 - The `$CUB` dir should be like this:
-<img src="./fig/cub-dir.png" width="50%" height="50%">
+<img src="./fig/cub-dir.png" width="30%" height="30%">
 
 2. Change `data_dir` in `run.sh` to `$CUB`, run the scprit `sh run.sh` to obtain the result.
 
