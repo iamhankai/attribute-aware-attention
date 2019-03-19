@@ -62,7 +62,7 @@ def init_classification(input_fea_map, dim_channel, nb_class, name=None):
     pool = BatchNormalization()(pool)
     pool = Activation('relu')(pool)
     # classification
-    prob = Dropout(dropout)(pool)
+    pool = Dropout(dropout)(pool)
     prob = Dense(nb_class)(pool)
     prob = Activation(activation='softmax',name=name)(prob)
     return prob,pool,fea_map
