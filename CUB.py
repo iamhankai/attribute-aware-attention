@@ -113,7 +113,7 @@ def load_data(data_folder, target_size=(224, 224), bounding_box=True):
 
 
 if __name__ == '__main__':
-    (X_train,y_train), (X_test,y_test) = load_data()
+    (X_train,y_train), (X_test,y_test),(A_train,A_test,C_A) = load_data()
 
 
 
