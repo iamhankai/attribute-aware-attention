@@ -3,7 +3,7 @@ Code for ACM Multimedia 2018 oral paper: Attribute-Aware Attention Model for Fin
 
 <img src="./fig/title.png" width="70%" height="70%">
 
-We have presented fine-grained classification, person re-id, image retrieval in the paper. Here is the example of fine-grained classification. For detailed results, refer to the [original paper](https://dl.acm.org/citation.cfm?id=3240550) or [ArXiv](https://arxiv.org/abs/1901.00392).
+We have presented results of **fine-grained classification**, **person re-id**, **image retrieval** tasks, including CUB-200-2011, Market-1501, CARS196 datasets in the paper. Here is the example of fine-grained classification. For detailed results, refer to the [original paper](https://dl.acm.org/citation.cfm?id=3240550) or [ArXiv](https://arxiv.org/abs/1901.00392).
 
 
 ### Usage
